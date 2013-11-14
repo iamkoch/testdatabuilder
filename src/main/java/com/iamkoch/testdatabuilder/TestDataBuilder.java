@@ -23,8 +23,8 @@ public abstract class TestDataBuilder<T extends TestDataBuilder<T, U>, U> {
     }
 
     /**
-     * Returns
-     * @return
+     * Returns your entity for use
+     * @return the entity you've configured
      */
     public final U build() {
         return this.entity;
@@ -42,7 +42,7 @@ public abstract class TestDataBuilder<T extends TestDataBuilder<T, U>, U> {
      * @param entity The class of your entity or POJO
      * @param <T> The type of your builder
      * @param <U> The type of your entity
-     * @return
+     * @return an instance of your builder class
      */
     public static <T extends TestDataBuilder<T, U>, U> T create(Class<T> builderClass, Class<U> entity) {
 
